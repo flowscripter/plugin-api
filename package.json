@@ -1,14 +1,14 @@
 {
-    "name": "@flowscripter/ts-template",
+    "name": "@flowscripter/plugin-api",
     "version": "0.0.0",
-    "description": "Template TypeScript project.",
+    "description": "Flowscripter Plugin API.",
     "repository": {
         "type": "git",
-        "url": "https://github.com/flowscripter/ts-template"
+        "url": "https://github.com/flowscripter/plugin-api"
     },
-    "homepage": "https://github.com/flowscripter/ts-template",
+    "homepage": "https://github.com/flowscripter/plugin-api",
     "bugs": {
-        "url": "https://github.com/flowscripter/ts-template/issues"
+        "url": "https://github.com/flowscripter/plugin-api/issues"
     },
     "keywords": [
         "typescript"
@@ -24,8 +24,8 @@
     "publishConfig": {
         "access": "public"
     },
-    "main": "dist/node.js",
-    "browser": "dist/browser.js",
+    "main": "dist/api.js",
+    "browser": "dist/api.js",
     "type": "module",
     "files": [
         "dist/**/*"
@@ -38,8 +38,7 @@
         "prebuild": "npx rimraf dist",
         "build": "npx rollup -c",
         "watch": "npx rollup -c --watch",
-        "test": "npx jest",
-        "lint": "npx eslint ./src/**/*.ts ./test/**/*.ts",
+        "lint": "npx eslint ./src/**/*.ts",
         "docs": "npx typedoc --moduleResolution node src"
     },
     "devDependencies": {
@@ -49,27 +48,19 @@
         "@flowscripter/renovate-config": "1.0.3",
         "@flowscripter/tsconfig": "1.2.0",
         "@types/debug": "4.1.5",
-        "@types/jest": "26.0.0",
         "@typescript-eslint/eslint-plugin": "3.3.0",
         "@typescript-eslint/parser": "3.3.0",
         "eslint": "7.2.0",
         "eslint-plugin-import": "2.21.2",
-        "eslint-plugin-jest": "23.13.2",
-        "gulp": "4.0.2",
         "husky": "4.2.5",
-        "jest": "26.0.1",
         "rimraf": "3.0.2",
         "rollup": "2.17.0",
         "rollup-plugin-cleanup": "3.1.1",
         "rollup-plugin-commonjs": "10.1.0",
-        "rollup-plugin-node-builtins": "2.1.2",
-        "rollup-plugin-node-resolve": "5.2.0",
         "rollup-plugin-peer-deps-external": "2.2.2",
         "rollup-plugin-typescript2": "0.27.1",
         "semantic-release": "17.0.8",
-        "sonarqube-scanner": "2.6.0",
         "temp-dir": "2.0.0",
-        "ts-jest": "26.1.0",
         "typedoc": "0.17.7",
         "typedoc-plugin-external-module-name": "4.0.3",
         "typescript": "3.9.5"
