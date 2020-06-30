@@ -2,9 +2,9 @@
  * @module @flowscripter/plugin-api
  */
 
-import Registry from './registry/Registry';
-import DatastoreManager from './datastore/DatastoreManager';
-import SessionManager from './session/SessionManager';
+import Registry from '../registry/Registry';
+import DatastoreManager from '../data/DatastoreManager';
+import SessionManager from '../session/SessionManager';
 
 /**
  * A context for the currently running [[Runtime]].

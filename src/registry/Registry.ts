@@ -2,7 +2,8 @@
  * @module @flowscripter/plugin-api
  */
 
-import Datastore from '../datastore/Datastore';
+import Datastore from '../data/Datastore';
+import DataModel from '../data/DataModel';
 
 /**
  * Provides a mechanism to manage all [[FlowscripterComponent]] instances loaded in a Flowscripter [[Runtime]].
@@ -16,5 +17,12 @@ export default interface Registry {
      *
      * @return an iterable of tuples [string, [[Datastore]]] for all registered [[Datastore]] implementations.
      */
-    getAllDataStores(): Iterable<[string, Datastore]>;
+    getAllDatastores(): Iterable<[string, Datastore]>;
+
+    /**
+     * Return all registered [[DataModel]] instances.
+     *
+     * @return an iterable of tuples [string, [[DataModel]]] for all registered [[DataModel]] implementations.
+     */
+    getAllDataModels(): Iterable<[string, DataModel]>;
 }
