@@ -26,7 +26,7 @@ TypeScript or JavaScript making use of the Runtime API.
 
 The following high level class diagram illustrates these relationships:
 
-![High Level Plugin Class Diagram](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/flowscripter/plugin-api/master/images/high_level_plugin_class_diagram.iuml "High Level Runtime Class Diagram")
+![High Level Plugin Class Diagram](http://www.plantuml.com/plantuml/proxy?fmt=svg&cache=no&src=https://raw.githubusercontent.com/flowscripter/plugin-api/master/images/high_level_plugin_class_diagram.iuml "High Level Runtime Class Diagram")
 
 #### Runtime and Context
 
@@ -38,7 +38,7 @@ The Runtime Context allows `FlowscripterComponent` implementations to interact w
 
 The following high level class diagram illustrates these relationships:
 
-![High Level Runtime Class Diagram](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/flowscripter/plugin-api/master/images/high_level_runtime_class_diagram.iuml "High Level Runtime Class Diagram")
+![High Level Runtime Class Diagram](http://www.plantuml.com/plantuml/proxy?fmt=svg&cache=no&src=https://raw.githubusercontent.com/flowscripter/plugin-api/master/images/high_level_runtime_class_diagram.iuml "High Level Runtime Class Diagram")
 
 **This is a work in progress**
 
