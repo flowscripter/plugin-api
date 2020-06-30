@@ -65,8 +65,8 @@
         "typedoc-plugin-external-module-name": "4.0.3",
         "typescript": "3.9.5"
     },
-    "peerDependencies": {
-        "debug": "4.1.1"
-    },
-    "dependencies": {}
+    "dependencies": {
+        "@flowscripter/cli-framework": "^5.2.7",
+        "@flowscripter/esm-dynamic-plugins": "^1.5.9"
+    }
 }
