@@ -10,7 +10,7 @@
 This project provides a Plugin API for the Flowscripter system.
 
 #### Plugins and Extensions
-The Plugin API is based on extensions to the interfaces provided in the
+Plugins are based on extensions to the interfaces provided in the
 [@flowscripter/esm-dynamic-plugins](https://github.com/flowscripter/esm-dynamic-plugins)
 and [@flowscripter/cli-framework](https://github.com/flowscripter/cli-framework) projects.
 
@@ -30,7 +30,7 @@ The following high level class diagram illustrates these relationships:
 
 #### Runtime and Context
 
-The Runtime API allows `FlowscripterCommand` implementations to manipulate and manage the Flowscripter
+The Runtime allows `FlowscripterCommand` implementations to manipulate and manage the Flowscripter
 [Runtime](https://github.com/flowscripter/runtime).
 
 The Runtime Context allows `FlowscripterComponent` implementations to interact with the internal operation of the Flowscripter

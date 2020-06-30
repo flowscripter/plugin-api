@@ -2,7 +2,7 @@
  * @module @flowscripter/plugin-api
  */
 
-import ConfigParameters from './ConfigParameters';
+import ConfigParameters from '../config/ConfigParameters';
 
 /**
  * Interface specifying a Flowscripter runtime component.
