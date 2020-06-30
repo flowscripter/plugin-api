@@ -2,7 +2,7 @@
  * @module @flowscripter/plugin-api
  */
 
-import RuntimeContext from '../context/RuntimeContext';
+import RuntimeContext from './RuntimeContext';
 
 /**
  * Interface exposed by a Flowscripter runtime implementation.

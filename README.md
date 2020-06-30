@@ -9,31 +9,36 @@
 ## Overview
 This project provides a Plugin API for the Flowscripter system.
 
-#### Plugin
+#### Plugins and Extensions
 The Plugin API is based on extensions to the interfaces provided in the
 [@flowscripter/esm-dynamic-plugins](https://github.com/flowscripter/esm-dynamic-plugins)
 and [@flowscripter/cli-framework](https://github.com/flowscripter/cli-framework) projects.
 
 The extended interfaces declare stricter types which explicit define their use as a plugin mechanism for the Flowscripter
-[CLI](https://github.com/flowscripter/cli) and [Runtime](https://github.com/flowscripter/runtime).
+[CLI](https://github.com/flowscripter/cli) and Flowscripter [Runtime](https://github.com/flowscripter/runtime).
+
+The two extensions which can be implemented by plugins are:
+
+* `FlowscripterComponent`: extend the Flowscripter [[Runtime](https://github.com/flowscripter/runtime) with
+core functionality such as payload types, datastores and operators. These may access the Runtime Context.
+* `FlowscripterCommand`: extend the Flowscripter [CLI](https://github.com/flowscripter/cli) with parameterised
+TypeScript or JavaScript making use of the Runtime API.
 
 The following high level class diagram illustrates these relationships:
 
-![High Level Plugin Class Diagram](images/high_level_plugin_class_diagram.png "High Level Plugin Class Diagram")
+![High Level Plugin Class Diagram](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/flowscripter/plugin-api/master/images/high_level_plugin_class_diagram.iuml "High Level Runtime Class Diagram")
 
-#### Command
+#### Runtime and Context
 
-#### Component
+The Runtime API allows `FlowscripterCommand` implementations to manipulate and manage the Flowscripter
+[Runtime](https://github.com/flowscripter/runtime).
 
-#### Runtime
+The Runtime Context allows `FlowscripterComponent` implementations to interact with the internal operation of the Flowscripter
+[Runtime](https://github.com/flowscripter/runtime).
 
-#### Runtime Context
+The following high level class diagram illustrates these relationships:
 
-###### Session
-
-###### Registry
-
-###### Datastore
+![High Level Runtime Class Diagram](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/flowscripter/plugin-api/master/images/high_level_runtime_class_diagram.iuml "High Level Runtime Class Diagram")
 
 **This is a work in progress**
 

@@ -16,7 +16,7 @@ export { default as ComponentExtensionDetails } from './plugin/ComponentExtensio
 export { default as ComponentExtensionFactory } from './plugin/ComponentExtensionFactory';
 
 export { default as Runtime } from './runtime/Runtime';
-export { default as RuntimeContext } from './context/RuntimeContext';
+export { default as RuntimeContext } from './runtime/RuntimeContext';
 
 export { default as FlowscripterCommand } from './command/FlowscripterCommand';
 
@@ -24,10 +24,12 @@ export { default as ConfigParameters } from './component/ConfigParameters';
 export { ConfigValueTypeName, ConfigSingleValueType, ConfigValueType } from './component/ConfigValueType';
 export { default as FlowscripterComponent } from './component/FlowscripterComponent';
 
-export { default as Datastore } from './context/datastore/Datastore';
-export { default as DatastoreManager } from './context/datastore/DatastoreManager';
+export { default as Datastore } from './data/Datastore';
+export { default as DatastoreManager } from './data/DatastoreManager';
+export { default as DataModel } from './data/DataModel';
+export { default as DataEntry } from './data/DataEntry';
 
-export { default as Registry } from './context/registry/Registry';
+export { default as Registry } from './registry/Registry';
 
-export { default as Session } from './context/session/Session';
-export { default as SessionManager } from './context/session/SessionManager';
+export { default as Session } from './session/Session';
+export { default as SessionManager } from './session/SessionManager';

@@ -2,7 +2,7 @@
  * @module @flowscripter/plugin-api
  */
 
-import RuntimeContext from '../context/RuntimeContext';
+import RuntimeContext from '../runtime/RuntimeContext';
 import FlowscripterComponent from '../component/FlowscripterComponent';
 import FlowscripterExtensionFactory from './FlowscripterExtensionFactory';
 
