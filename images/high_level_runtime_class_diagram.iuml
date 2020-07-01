@@ -48,7 +48,7 @@ RuntimeContext --> Registry
 RuntimeContext --> SessionManager
 RuntimeContext --> DatastoreManager
 
-Registry --> "    *" Datastore
+Registry --> "       *" Datastore
 Registry --> "*" DataModel
 
 SessionManager --> "*" Session : manages
