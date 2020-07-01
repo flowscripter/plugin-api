@@ -25,9 +25,7 @@ hide circle
 package plugin-api <<Rectangle>> {
     class FlowscripterComponent
     class FlowscripterCommand
-}
 
-package runtime-api <<Rectangle>> {
     class Runtime
     class RuntimeContext
 
@@ -43,23 +41,23 @@ package runtime-api <<Rectangle>> {
     class DataEntry
 }
 
-FlowscripterComponent ..> RuntimeContext: can access
-FlowscripterCommand ..> Runtime: can access
+FlowscripterComponent -right-> RuntimeContext: can access
+FlowscripterCommand -right-> Runtime: can access
 
 RuntimeContext --> Registry
 RuntimeContext --> SessionManager
 RuntimeContext --> DatastoreManager
 
-Registry --> "*" Datastore
+Registry --> "    *" Datastore
 Registry --> "*" DataModel
 
 SessionManager --> "*" Session : manages
 
-DatastoreManager --> "           *" Datastore : manages
+DatastoreManager --> "  *" Datastore : manages
 
-Datastore -right-> "*" DataEntry: stores
+Datastore -right-> "      *" DataEntry: stores
 
-Session --> "             *" DataEntry: contains
+Session --> "    *" DataEntry: contains
 
 DataEntry -> DataModel: defined by
 

@@ -3,7 +3,7 @@
  */
 
 import FlowscripterExtensionDetails from './FlowscripterExtensionDetails';
-import ConfigParameters from '../component/ConfigParameters';
+import ConfigParameters from '../config/ConfigParameters';
 
 /**
  * Details for the [[FlowscripterComponent]] implementation provided by the extension.

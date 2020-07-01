@@ -20,8 +20,8 @@ export { default as RuntimeContext } from './runtime/RuntimeContext';
 
 export { default as FlowscripterCommand } from './command/FlowscripterCommand';
 
-export { default as ConfigParameters } from './component/ConfigParameters';
-export { ConfigValueTypeName, ConfigSingleValueType, ConfigValueType } from './component/ConfigValueType';
+export { default as ConfigParameters } from './config/ConfigParameters';
+export { ConfigValueTypeName, ConfigSingleValueType, ConfigValueType } from './config/ConfigValueType';
 export { default as FlowscripterComponent } from './component/FlowscripterComponent';
 
 export { default as Datastore } from './data/Datastore';
