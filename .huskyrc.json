@@ -1,6 +1,6 @@
 {
     "hooks": {
-        "pre-commit": "npm run lint",
+        "pre-commit": "npm run lint && npx gulp -f gulpfile.cjs renderuml",
         "commit-msg": "npx commitlint -E HUSKY_GIT_PARAMS"
     }
 }

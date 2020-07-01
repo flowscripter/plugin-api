@@ -39,7 +39,8 @@
         "build": "npx rollup -c",
         "watch": "npx rollup -c --watch",
         "lint": "npx eslint ./src/**/*.ts",
-        "docs": "npx typedoc --moduleResolution node src"
+        "docs": "npx typedoc --moduleResolution node src",
+        "uml": "npx gulp -f gulpfile.cjs renderuml"
     },
     "devDependencies": {
         "@commitlint/cli": "8.3.5",
@@ -52,7 +53,9 @@
         "@typescript-eslint/parser": "3.3.0",
         "eslint": "7.2.0",
         "eslint-plugin-import": "2.21.2",
+        "gulp": "4.0.2",
         "husky": "4.2.5",
+        "needle": "^2.5.0",
         "rimraf": "3.0.2",
         "rollup": "2.17.0",
         "rollup-plugin-cleanup": "3.1.1",
@@ -66,7 +69,8 @@
         "typescript": "3.9.5"
     },
     "dependencies": {
-        "@flowscripter/cli-framework": "^5.2.7",
-        "@flowscripter/esm-dynamic-plugins": "^1.5.9"
+        "@flowscripter/cli-framework": "5.2.7",
+        "@flowscripter/esm-dynamic-plugins": "1.5.9",
+        "pako": "^1.0.11"
     }
 }
