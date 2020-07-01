@@ -9,20 +9,22 @@
 ## Overview
 This project provides a Plugin API for the Flowscripter system.
 
+**This is a work in progress**
+
 #### Plugins and Extensions
 Plugins are based on extensions to the interfaces provided in the
 [@flowscripter/esm-dynamic-plugins](https://github.com/flowscripter/esm-dynamic-plugins)
 and [@flowscripter/cli-framework](https://github.com/flowscripter/cli-framework) projects.
 
-The extended interfaces declare stricter types which explicit define their use as a plugin mechanism for the Flowscripter
+The extended interfaces declare stricter types which explicitly define their use as a plugin mechanism for the Flowscripter
 [CLI](https://github.com/flowscripter/cli) and Flowscripter [Runtime](https://github.com/flowscripter/runtime).
 
 The two extensions which can be implemented by plugins are:
 
-* `FlowscripterComponent`: extend the Flowscripter [[Runtime](https://github.com/flowscripter/runtime) with
-core functionality such as payload types, datastores and operators. These may access the Runtime Context.
-* `FlowscripterCommand`: extend the Flowscripter [CLI](https://github.com/flowscripter/cli) with parameterised
-TypeScript or JavaScript making use of the Runtime API.
+* `FlowscripterComponent`: These extend the Flowscripter [Runtime](https://github.com/flowscripter/runtime) with
+core functionality (e.g. payload types, datastores and operators) and may access the Runtime Context.
+* `FlowscripterCommand`: These extend the Flowscripter [CLI](https://github.com/flowscripter/cli) with parameterised
+TypeScript or JavaScript and may access the Runtime API.
 
 The following high level class diagram illustrates these relationships:
 
@@ -30,17 +32,15 @@ The following high level class diagram illustrates these relationships:
 
 #### Runtime and Context
 
-The Runtime allows `FlowscripterCommand` implementations to manipulate and manage the Flowscripter
-[Runtime](https://github.com/flowscripter/runtime).
+The Runtime interface allows `FlowscripterCommand` implementations to manipulate and manage a Flowscripter
+[Runtime](https://github.com/flowscripter/runtime) instance.
 
-The Runtime Context allows `FlowscripterComponent` implementations to interact with the internal operation of the Flowscripter
-[Runtime](https://github.com/flowscripter/runtime).
+The Runtime Context interface allows `FlowscripterComponent` implementations to interact with the internal processing
+loop of the Flowscripter [Runtime](https://github.com/flowscripter/runtime).
 
 The following high level class diagram illustrates these relationships:
 
 ![High Level Runtime Class Diagram](http://www.plantuml.com/plantuml/proxy?fmt=svg&cache=no&src=https://raw.githubusercontent.com/flowscripter/plugin-api/master/images/high_level_runtime_class_diagram.iuml "High Level Runtime Class Diagram")
-
-**This is a work in progress**
 
 ## Development
 
