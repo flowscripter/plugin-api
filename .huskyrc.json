@@ -1,6 +1,6 @@
 {
     "hooks": {
-        "pre-commit": "npm run lint",
+        "pre-commit": "npm run lint && npx plantrender --sourceFolder=images --destFolder=images && git add images/*.png",
         "commit-msg": "npx commitlint -E HUSKY_GIT_PARAMS"
     }
 }

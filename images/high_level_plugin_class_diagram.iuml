@@ -69,7 +69,7 @@ FlowscripterExtensionDescriptor <|-down- CommandExtensionDescriptor
 FlowscripterExtensionDescriptor <|-down- ComponentExtensionDescriptor
 
 PluginManager -right-> "*" Plugin : "registers"
-Plugin -right-> "1..*" ExtensionDescriptor
+Plugin -right-> "  1..*" ExtensionDescriptor
 ExtensionDescriptor -right-> ExtensionFactory
 FlowscripterPlugin --> PluginDetails : "pluginData"
 FlowscripterExtensionDescriptor --> FlowscripterExtensionDetails : "extensionData"
