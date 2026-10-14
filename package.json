@@ -3,10 +3,10 @@
   "version": "1.3.2",
   "description": "Flowscripter plugin API: interfaces for command and component plugins",
   "keywords": [
+    "api",
     "bun",
     "flowscripter",
-    "plugin",
-    "api"
+    "plugin"
   ],
   "homepage": "https://github.com/flowscripter/plugin-api#readme",
   "license": "MIT",
