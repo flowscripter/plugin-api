@@ -1,73 +1,71 @@
 # plugin-api
-[![license](https://img.shields.io/github/license/flowscripter/plugin-api.svg)](https://github.com/flowscripter/plugin-api/blob/master/LICENSE)
-[![dependencies](https://img.shields.io/david/flowscripter/plugin-api.svg)](https://david-dm.org/flowscripter/plugin-api)
-[![travis](https://api.travis-ci.com/flowscripter/plugin-api.svg)](https://travis-ci.com/flowscripter/plugin-api)
-[![npm](https://img.shields.io/npm/v/@flowscripter/plugin-api.svg)](https://www.npmjs.com/package/@flowscripter/plugin-api)
 
-> Flowscripter Plugin API.
+[![version](https://img.shields.io/github/v/release/flowscripter/plugin-api?sort=semver)](https://github.com/flowscripter/plugin-api/releases)
+[![build](https://img.shields.io/github/actions/workflow/status/flowscripter/plugin-api/release-bun-library.yml)](https://github.com/flowscripter/plugin-api/actions/workflows/release-bun-library.yml)
+[![coverage](https://codecov.io/gh/flowscripter/plugin-api/graph/badge.svg?token=uWK0oWsBjr)](https://codecov.io/gh/flowscripter/plugin-api)
+[![docs](https://img.shields.io/badge/docs-API-blue)](https://flowscripter.github.io/plugin-api/index.html)
+[![license: MIT](https://img.shields.io/github/license/flowscripter/plugin-api)](https://github.com/flowscripter/plugin-api/blob/main/LICENSE)
 
-## Overview
-This project provides a Plugin API for the Flowscripter system.
+> Flowscripter plugin API: interfaces for command and component plugins
 
-**This is a work in progress**
+> Work in progress.
 
-#### Plugins and Extensions
-Plugins are based on extensions to the interfaces provided in the
-[@flowscripter/esm-dynamic-plugins](https://github.com/flowscripter/esm-dynamic-plugins)
-and [@flowscripter/cli-framework](https://github.com/flowscripter/cli-framework) projects.
+## Bun Module Usage
 
-The extended interfaces declare stricter types which explicitly define their use as a plugin mechanism for the Flowscripter
-[CLI](https://github.com/flowscripter/cli) and Flowscripter [Runtime](https://github.com/flowscripter/runtime).
+Add the module:
 
-The two extensions which can be implemented by plugins are:
+`bun add @flowscripter/plugin-api`
 
-* `FlowscripterComponent`: These extend the Flowscripter [Runtime](https://github.com/flowscripter/runtime) with
-core functionality (e.g. payload types, datastores and operators) and may access the Runtime Context.
-* `FlowscripterCommand`: These extend the Flowscripter [CLI](https://github.com/flowscripter/cli) with parameterised
-TypeScript or JavaScript and may access the Runtime API.
+Use the module:
 
-The following high level class diagram illustrates these relationships:
+```typescript
+import { world } from "@flowscripter/plugin-api";
 
-![High Level Plugin Class Diagram](images/high_level_plugin_class_diagram.png "High Level Plugin Class Diagram")
-
-#### Runtime and Context
-
-The Runtime interface allows `FlowscripterCommand` implementations to manipulate and manage a Flowscripter
-[Runtime](https://github.com/flowscripter/runtime) instance.
-
-The Runtime Context interface allows `FlowscripterComponent` implementations to interact with the internal processing
-loop of the Flowscripter [Runtime](https://github.com/flowscripter/runtime).
-
-The following high level class diagram illustrates these relationships:
-
-![High Level Runtime Class Diagram](images/high_level_runtime_class_diagram.png "High Level Runtime Class Diagram")
+world();
+```
 
 ## Development
 
-Firstly:
+Install dependencies:
 
+`bun install`
+
+Build (produces `dist/` for Node.js and TypeScript consumers; Bun uses raw source directly):
+
+`bun run build`
+
+Test:
+
+`bun test`
+
+Format:
+
+`bunx oxfmt`
+
+Lint:
+
+`bunx oxlint index.ts src/ tests/`
+
+Generate HTML API Documentation:
+
+`bunx typedoc index.ts`
+
+## Documentation
+
+### Overview
+
+Sample mermaid diagram to test rendering in markdown:
+
+```mermaid
+classDiagram
+    Foo <|-- Bar
 ```
-npm install
-```
 
-then:
+### API
 
-Build: `npm run build`
+Link to auto-generated API docs:
 
-Watch: `npm run watch`
-
-Lint: `npm run lint`
-
-Docs: `npm run docs`
-
-## API
-
-[API documentation](https://flowscripter.github.io/plugin-api)
-
-## Further Details
-
-Further details on project configuration files and Javascript version support can be found in
-the [template for this project](https://github.com/flowscripter/ts-template/blob/master/README.md#overview).
+[API Documentation](https://flowscripter.github.io/plugin-api/index.html)
 
 ## License
 
