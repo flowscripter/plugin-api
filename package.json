@@ -1,6 +1,6 @@
 {
   "name": "@flowscripter/plugin-api",
-  "version": "1.3.2",
+  "version": "1.0.2",
   "description": "Flowscripter plugin API: interfaces for command and component plugins",
   "keywords": [
     "api",
