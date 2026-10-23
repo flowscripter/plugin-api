@@ -24,7 +24,8 @@ export interface Logger {
   info(message: string, fields?: LogFields): void;
   warn(message: string, fields?: LogFields): void;
   /**
-   * Implementations must serialize `cause` explicitly (`JSON.stringify(new Error())` is `{}`).
+   * `cause` is passed as-is and may be an `Error` with circular references; implementations render it
+   * with a circular-safe formatter and must not rely on `JSON.stringify` (which gives `{}` for an `Error`).
    */
   error(message: string, fields?: LogFields, cause?: unknown): void;
 }
