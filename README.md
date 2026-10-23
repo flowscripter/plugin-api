@@ -19,9 +19,20 @@ Add the module:
 Use the module:
 
 ```typescript
-import { world } from "@flowscripter/plugin-api";
+import {
+  createComponentPlugin,
+  type ComponentFactory,
+  type Datastore,
+} from "@flowscripter/plugin-api";
 
-world();
+const datastoreFactory: ComponentFactory<unknown, Datastore> = {
+  create: async () => ({
+    config: {},
+    async *getAllDataEntries() {},
+  }),
+};
+
+const plugin = createComponentPlugin({ datastoreFactory });
 ```
 
 ## Development
