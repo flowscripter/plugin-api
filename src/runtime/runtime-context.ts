@@ -1,3 +1,8 @@
+import type { Session } from "../processing/session.ts";
+import type { DatastoreManager } from "./datastore-manager.ts";
+import type { Registry } from "./registry.ts";
+import type { SessionManager } from "./session-manager.ts";
+
 /**
  * Plain structured data (JSON-compatible) which a host may pretty-print and highlight.
  */
@@ -51,4 +56,18 @@ export interface MetricEvent {
   readonly value: number;
   readonly unit?: string;
   readonly tags?: Readonly<Record<string, string>>;
+}
+
+/**
+ * Everything a runtime needs for processing, passed to components on creation.
+ */
+export interface RuntimeContext {
+  readonly logger: Logger;
+  readonly output: Output;
+  reportProgress(event: ProgressEvent): void;
+  reportMetric(event: MetricEvent): void;
+  readonly registry: Registry;
+  readonly datastoreManager: DatastoreManager;
+  readonly sessionManager: SessionManager;
+  readonly session: Session;
 }
