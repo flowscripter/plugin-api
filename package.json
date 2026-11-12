@@ -40,13 +40,13 @@
     "build": "tsc -p tsconfig.build.json"
   },
   "dependencies": {
-    "@flowscripter/dynamic-cli-framework-api": "^5.1.7",
+    "@flowscripter/dynamic-cli-framework-api": "^5.1.8",
     "@flowscripter/dynamic-plugin-framework": "^2.3.5"
   },
   "devDependencies": {
     "@types/bun": "^1.4.4",
-    "oxfmt": "0.77.0",
-    "oxlint": "1.92.0"
+    "oxfmt": "0.78.0",
+    "oxlint": "1.93.0"
   },
   "peerDependencies": {
     "typescript": "^7.0.2"
